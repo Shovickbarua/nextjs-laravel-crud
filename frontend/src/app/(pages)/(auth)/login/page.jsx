@@ -31,7 +31,7 @@ const handleSubmit = async (e) => {
     if (res.success) {
         setMessage(res.data.message);
         setUser(res.data.data);
-        navigate('/inventory');
+        redirect('/inventories');
     }else if (res.errors){
         setError(res.errors.message)
     }

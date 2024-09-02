@@ -1,5 +1,6 @@
 'use client'
 import AuthApi from '@/app/api/AuthApi';
+import { redirect } from 'next/dist/server/api-utils';
 import React, { useState } from 'react'
 // import { Link, useNavigate } from 'react-router-dom';
 
@@ -27,7 +28,7 @@ const handleSubmit = async (e) => {
     const res = await AuthApi.register(state);
     if (res.success) {
         setMessage(res.data.message);
-        // navigate('/');
+        redirect('/login');
     }
     setLoading(false); 
 };

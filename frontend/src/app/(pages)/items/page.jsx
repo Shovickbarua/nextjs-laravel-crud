@@ -97,7 +97,7 @@ const Items = () => {
                         </td>
                         <td className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"> {item?.inventory?.name}</td>
                         <td className="py-8 px-6 text-sm font-medium float-right whitespace-nowrap flex my-auto">
-                          <Link href={`/edit-item/${item.id}`} passHref>
+                          <Link href={`/items/edit/${item.id}`} passHref>
                             <a className="text-blue-600 dark:text-blue-500 hover:underline text-2xl"><FaEdit/></a>
                           </Link>
                           <button onClick={() => itemDelete(item.id)} className="ml-2 text-blue-600 dark:text-blue-500 hover:underline text-2xl"><MdDelete /></button>

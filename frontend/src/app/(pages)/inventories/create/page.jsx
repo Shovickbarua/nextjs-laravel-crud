@@ -1,11 +1,10 @@
 "use client"; 
 import InventoryApi from '@/app/api/InventoryApi';
-import { useParams } from 'next/navigation';
+import { redirect, useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
 const InventoryForm = () => {
 const { id } = useParams();
-// const navigate = useNavigate();
   const [state, setState] = useState({
     name: "",
     description: "",
@@ -44,7 +43,7 @@ const handleSubmit = async (e) => {
     const res = await InventoryApi.save(state);
     if (res.success) {
         setMessage(res.data.message);
-        navigate('/inventory');
+        redirect('/inventories');
     }
     setLoading(false); 
 };
