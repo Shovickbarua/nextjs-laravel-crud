@@ -1,3 +1,4 @@
+"use client"; 
 import React, { useEffect, useState } from 'react'
 import InventoryApi from '../../api/InventoryApi';
 import { useNavigate, useParams } from 'react-router-dom';

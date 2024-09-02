@@ -1,3 +1,4 @@
+"use client"; 
 import React, {useState, useEffect} from 'react'
 import { FaEdit } from 'react-icons/fa';
 import { MdDelete } from 'react-icons/md';
