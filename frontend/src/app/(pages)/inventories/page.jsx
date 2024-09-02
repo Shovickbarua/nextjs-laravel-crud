@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react'
 import { FaEdit } from 'react-icons/fa';
 import { MdDelete } from 'react-icons/md';
 import InventoryApi from '../../api/InventoryApi';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Inventory = () => {
     const [state, setState] = useState([]);
@@ -45,10 +45,10 @@ const Inventory = () => {
                     <h1>All Inventories</h1>
                 </div>
                 <div>
-                    <Link to='/item' className="mr-2 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mb-4">
+                    <Link href='/items' className="mr-2 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mb-4">
                         Item
                     </Link>
-                    <Link to='/add-inventory' className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mb-4">
+                    <Link href='/inventories/create'  className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mb-4">
                         Add
                     </Link>
                 </div>
@@ -89,7 +89,7 @@ const Inventory = () => {
                                           <td className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{inventory.name}</td>
                                           <td className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{inventory.description}</td>
                                           <td className="py-8 px-6 text-sm font-medium float-right whitespace-nowrap flex my-auto">
-                                              <Link to={'/edit-inventory/' + inventory.id} className="text-blue-600 dark:text-blue-500 hover:underline text-2xl"><FaEdit/></Link>
+                                              <Link href={'/inventories/edit' + inventory.id} className="text-blue-600 dark:text-blue-500 hover:underline text-2xl"><FaEdit/></Link>
                                               <button onClick={() => deleteInventory(inventory.id)} className="ml-2 text-blue-600 dark:text-blue-500 hover:underline text-2xl"><MdDelete /></button>
                                           </td>
                                       </tr>

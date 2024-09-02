@@ -6,8 +6,8 @@ import ItemApi from '@/app/api/ItemApi';
 
 
 const ItemForm = () => {
-    const router = useRouter();
-    const { id } = router.query;
+    // const router = useRouter();
+    // const { id } = router.query;
     const [inventory, setInventory] = useState([]);
     const [loading, setLoading] = useState(false);
     const [fetchingItem, setFetchingItem] = useState(false);
@@ -25,11 +25,11 @@ const ItemForm = () => {
         getInventory();
     }, []);
 
-    useEffect(() => {
-        if (id) {
-            getItem(id);
-        }
-    }, [id]);
+    // useEffect(() => {
+    //     if (id) {
+    //         getItem(id);
+    //     }
+    // }, [id]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -94,7 +94,7 @@ const ItemForm = () => {
                     <form onSubmit={handleSubmit}>
                         <div className='grid grid-cols-2'>
                             <div>
-                                <h2 className="text-lg font-semibold text-gray-700 capitalize dark:text-white">{id ? 'Edit' : 'Add'} Item</h2>
+                                {/* <h2 className="text-lg font-semibold text-gray-700 capitalize dark:text-white">{id ? 'Edit' : 'Add'} Item</h2> */}
                             </div>
                             <div className="flex justify-end">
                                 <button type='submit' className="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">

@@ -44,12 +44,12 @@ const Items = () => {
             <h1>All Items</h1>
           </div>
           <div>
-            <Link href="/" passHref>
+            <Link href="/inventories" passHref>
               <button className="mr-2 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mb-4">
                 Inventory                    
               </button>
             </Link>
-            <Link href="/add-item" passHref>
+            <Link href="/items/create" passHref>
               <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mb-4">
                 Add
               </button>

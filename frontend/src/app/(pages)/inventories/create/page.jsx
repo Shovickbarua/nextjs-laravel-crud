@@ -1,11 +1,11 @@
 "use client"; 
-import React, { useEffect, useState } from 'react'
-import InventoryApi from '../../api/InventoryApi';
-import { useNavigate, useParams } from 'react-router-dom';
+import InventoryApi from '@/app/api/InventoryApi';
+import { useParams } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
 
 const InventoryForm = () => {
 const { id } = useParams();
-const navigate = useNavigate();
+// const navigate = useNavigate();
   const [state, setState] = useState({
     name: "",
     description: "",
