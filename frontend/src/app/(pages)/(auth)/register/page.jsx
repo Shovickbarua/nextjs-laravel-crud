@@ -28,7 +28,7 @@ const handleSubmit = async (e) => {
     const res = await AuthApi.register(state);
     if (res.success) {
         setMessage(res.data.message);
-        redirect('/login');
+        router.push('/login');
     }
     setLoading(false); 
 };
