@@ -1,9 +1,10 @@
-import axios from "axios";
+import axios from "../axios/Axios";
+
 
 const AuthApi = () => {};
 
 AuthApi.login = async (data) => {
-    const url = "http://127.0.0.1:3000/api/login";
+    const url = "/api/login";
     const res = await axios.post(url, data)
         .then((response) => {
             return response.data;
@@ -15,7 +16,7 @@ AuthApi.login = async (data) => {
 };
 
 AuthApi.register = async (data) => {
-    let url = "http://127.0.0.1:3000/api/register";
+    let url = "/api/register";
     const res = await axios.post(url, data)
         .then((response) => {
             return response.data;
